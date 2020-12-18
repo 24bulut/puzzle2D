@@ -10,7 +10,11 @@ public class gameManager : MonoBehaviour
 
     [Header("puzzle items ")]
     public List<GameObject> itemList = new List<GameObject>();
-    
+    public GameObject  gameCanvas;
+    public GameObject  completeCanvas;
+    public GameObject  menuCanvas;
+
+
 
     public int level;
     Game gameObj = new Game();
@@ -26,8 +30,26 @@ public class gameManager : MonoBehaviour
         if (gameObj.complate)
         {
             Debug.Log("********Oyun Bitti !!*********");
-            
+            gameCanvas.SetActive(false);
+            completeCanvas.SetActive(true);
+
+
         }
+    }
+
+    public void nextLevel(){
+        gameObj.nextLevel();
+    }
+
+    public void toggleMenu(){
+        gameCanvas.SetActive(!gameCanvas.activeInHierarchy);
+        
+        menuCanvas.SetActive(!menuCanvas.activeInHierarchy);
+
+    }
+
+    public void quitGame(){
+        Application.Quit();
     }
 
 }
