@@ -9,12 +9,15 @@ namespace game
 {
     public class Game:Level
     {
-        private int x=-240;
+        private float x=50f;
+        private float y=80f;
+
         public bool complate;
         public Game()
         {
             complate = false;
         }
+        
         public void checkSlot(List<GameObject> puzzleSlots)
         {   
            if(puzzleSlots.All(go => go.GetComponent<puzzleSlot>().matched != false ))
@@ -23,9 +26,17 @@ namespace game
         
         public void mixItems(List<GameObject> puzzleItems)
         {   
-            System.Random rand = new System.Random();  
-            int index = rand.Next(puzzleItems.Count());  
-            Debug.Log(index);
+            if (puzzleItems.Count()>0)
+            {
+                System.Random rand = new System.Random();  
+                int index = rand.Next(puzzleItems.Count());  
+                //Debug.Log(index);
+                //Debug.Log(puzzleItems[index].transform.position);
+                puzzleItems[index].transform.position = new Vector2(x, y);
+                puzzleItems.RemoveAt(index);
+                x+=60;
+                mixItems(puzzleItems);
+            }
         }
     }
 }

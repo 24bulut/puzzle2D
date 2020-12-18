@@ -5,12 +5,12 @@ using game;
 
 public class gameManager : MonoBehaviour
 {
-    [Header("slots | enfazla 18")]
+    [Header("slots")]
     public List<GameObject> slotList = new List<GameObject>();
 
-    [Header("puzzle items | enfazla 18 ")]
+    [Header("puzzle items ")]
     public List<GameObject> itemList = new List<GameObject>();
-    //rast gele karıştırmak için itemleri alıyorum.
+    
 
     public int level;
     Game gameObj = new Game();
@@ -26,6 +26,8 @@ public class gameManager : MonoBehaviour
         if (gameObj.complate)
         {
             Debug.Log("********Oyun Bitti !!*********");
+            
         }
     }
+
 }
