@@ -6,11 +6,11 @@ using UnityEngine.EventSystems;
 public class puzzleSlot : MonoBehaviour,IDropHandler
 {
     public bool matched = false;
-   public void OnDrop(PointerEventData eventData){
+    public void OnDrop(PointerEventData eventData){
        if (eventData.pointerDrag != null)
        {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            Debug.Log(eventData.pointerDrag.tag);
+            //Debug.Log(eventData.pointerDrag.tag);
             if (eventData.pointerDrag.tag==gameObject.tag)
             {
                 //Debug.Log("eşleşti !!!!!!");
@@ -20,5 +20,5 @@ public class puzzleSlot : MonoBehaviour,IDropHandler
                 matched=false;                
             }
        }
-   }
+    }
 }

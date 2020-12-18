@@ -21,6 +21,7 @@ public class dragItem : MonoBehaviour,IDropHandler , IPointerDownHandler , IDrag
     }
     public void OnEndDrag(PointerEventData eventData){
         canvasGroup.blocksRaycasts =true;
+
     }
     public void OnPointerDown(PointerEventData eventData){
         //Debug.Log("deneme");
