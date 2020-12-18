@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 namespace game
 {
@@ -12,8 +13,8 @@ namespace game
             complate = false;
         }
         public void checkSlot(List<GameObject> puzzleSlots)
-        {
-            if (puzzleSlots.Exists(go => go.GetComponent<puzzleSlot>().matched != false))
+        {   
+           if(puzzleSlots.All(go => go.GetComponent<puzzleSlot>().matched != false ))
                 complate = true;
         }
     }

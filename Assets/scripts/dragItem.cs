@@ -23,7 +23,7 @@ public class dragItem : MonoBehaviour,IDropHandler , IPointerDownHandler , IDrag
         canvasGroup.blocksRaycasts =true;
     }
     public void OnPointerDown(PointerEventData eventData){
-        Debug.Log("deneme");
+        //Debug.Log("deneme");
     }
     public void OnDrop(PointerEventData eventData){
         throw new System.NotImplementedException();
