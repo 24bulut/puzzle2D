@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8460183417467439696}
   - component: {fileID: 8460183417467439701}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: puzzleSlot
   m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -234, y: 115}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8460183417467439703
 CanvasRenderer:

@@ -9,7 +9,7 @@ namespace game
 {
     public class Game:Level
     {
-        private float x=50f;
+        private float x=100f;
         private float y=80f;
 
         public bool complate;
@@ -34,7 +34,7 @@ namespace game
                 //Debug.Log(puzzleItems[index].transform.position);
                 puzzleItems[index].transform.position = new Vector2(x, y);
                 puzzleItems.RemoveAt(index);
-                x+=60;
+                x+=130;//120 item weight 10 margin
                 mixItems(puzzleItems);
             }
         }

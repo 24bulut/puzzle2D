@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6508762769731392588}
   - component: {fileID: 6508762769731392587}
   m_Layer: 0
-  m_Name: Image (2)
+  m_Name: puzzleItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -249, y: -102}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6508762769731392586
 CanvasRenderer:
